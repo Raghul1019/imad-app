@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background-color: lightgrey;
+    background-color: yellow;
     margin-top: 75px;
 }
 
@@ -12,8 +12,8 @@ body {
     font-size: 300%;
 }
 
-.bold {
-    font-weight: bold;
+.normal {
+    font-weight: normal;
 }
 
 .img-medium {

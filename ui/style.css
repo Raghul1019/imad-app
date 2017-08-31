@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     background-color: red;
-    background-image: url(paper.gif);
+    background-image: url(/ui/paper.gif);
     margin-top: 75px;
 }
 

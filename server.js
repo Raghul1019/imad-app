@@ -18,8 +18,8 @@ app.get('/article-two', function (req, res) {
 app.get('/article-three', function (req, res) {
     res.send('idhu dhan da moonavadhu article uh');
 });
-app.get('/image', function(res, req) {
-    res.sendFile(path.join(_dirname,'ui', 'my.png' ));
+app.get('/', function(res, req) {
+    res.sendFile(path.join(_dirname, 'ui', 'my.png'));
 });
 
 app.get('/ui/style.css', function (req, res) {

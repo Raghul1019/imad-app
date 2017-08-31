@@ -10,7 +10,13 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function (req, res) {
-    res.send(idhu dhan da modho article');
+    res.send('idhu dhan da modho article uh :)');
+});
+app.get('/article-two', function (req, res) {
+    res.send('idhu dhan da rendavadhu article');
+});
+app.get('/article-three', function (req, res) {
+    res.send('idhu dhan da moonavadhu article uh');
 });
 
 app.get('/ui/style.css', function (req, res) {

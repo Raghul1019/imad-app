@@ -24,8 +24,8 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/ui/me.png', function(req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'me.png'));
+app.get('/imad-app/me.png', function(req, res) {
+    res.sendFile(path.join(__dirname, 'imad-app', 'me.png'));
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers

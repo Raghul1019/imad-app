@@ -1,5 +1,5 @@
 body {
-    font-family: sans-serif;
+    font-family: Georgia;
     background-color: grey;
     margin-top: 75px;
 }
@@ -12,11 +12,11 @@ p {
 }
 
 .text-big {
-    font-size: 1000%;
+    font-size: 100%;
 }
 
 .normal {
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .img-medium {

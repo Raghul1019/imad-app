@@ -3,6 +3,9 @@ body {
     background-color: grey;
     margin-top: 75px;
 }
+p {
+  color: red;
+}
 
 .center {
     text-align: center;
@@ -18,5 +21,6 @@ body {
 
 .img-medium {
     height: 200px;
+
 }
 

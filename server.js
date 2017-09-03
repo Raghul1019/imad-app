@@ -5,22 +5,23 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-   var articleOne ={
+   var articles ={
+   "article-one" :{
                   title : 'Article one - Raghul Prasad ',
                   heading:'Article-One',
                   content:` <p>   
                               This is my first article.This is my first article.This is my first article.This is my first article.
                             </p>`
     
-                };  
-     var articleTwo={
+                },  
+      "article-two":{
                   title : 'Article two - Raghul Prasad ',
                   heading:'Article-Two',
                   content:` <p>   
                               This is my second article.This is my second article.This is my second article.This is my second article.
                             </p>`
-                };
-    var articleThree={
+                },
+     "article-three":{
                   title : 'Article three - Raghul Prasad ',
                   heading:'Article-Three',
                   content:` <p>   
@@ -28,7 +29,8 @@ app.use(morgan('combined'));
                             </p>`
         
                 
-               };
+               },
+   };
 
 function createTemplate (data) {
     
@@ -76,17 +78,11 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:articleName', function (req, res) {
-  res.send(createTemplate ( articleOne));
+    var articleName=req.poroms.articleName;
+  res.send(createTemplate(articles[articleName]));
     
 });
-app.get('/:articleName', function (req, res) {
-  res.send(createTemplate ( articleThree));
-    
-});
-app.get('/:articleName', function (req, res) {
-  res.send(createTemplate ( articleTwo));
-    
-});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });

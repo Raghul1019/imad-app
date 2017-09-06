@@ -79,13 +79,15 @@ app.get('/', function (req, res) {
 
 app.get('/article-one', function (req, res) {
     
-  res.send(createTemplate(articles[article-one]));
+  res.send(createTemplate(articles[articleone]));
     
 });
 app.get('/article-two',function (req, res) {
-    res.send(createTemplate(articles[article-one]));
+    res.send(createTemplate(articles[articletwo]));
 });
-
+app.get('/article-three',function (req, res){
+    res.send(createTemplate(articles[articlethree]));
+});
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });

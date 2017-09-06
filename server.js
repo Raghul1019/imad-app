@@ -59,7 +59,7 @@ var htmlTemplate=`
        ${content}
     </div>
             <div>
-                <a href "/article-one">Article-One</a>
+                <a href="/article-one">Article-One</a>
             </div>
             <div>
                 <a href="/article-two">Article-two</a>

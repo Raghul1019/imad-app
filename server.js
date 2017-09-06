@@ -14,14 +14,14 @@ app.use(morgan('combined'));
                         </p>`
     };
                 
-     var articletwo:{
+     var articletwo ={
                   title : 'Article two - Raghul Prasad ',
                   heading:'Article-Two',
                   content:` <p>   
                               This is my second article.This is my second article.This is my second article.This is my second article.
                             </p>`
                 };
-     var articlethree:{
+     var articlethree ={
                   title : 'Article three - Raghul Prasad ',
                   heading:'Article-Three',
                   content:` <p>   

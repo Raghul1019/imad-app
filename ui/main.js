@@ -1,4 +1,5 @@
 console.log('Loaded!');
+var element =document.getElementById('raghul');
 var img = document.getElementById('f');
 var marginLeft = 0;
 function moveRight(){

@@ -4,6 +4,12 @@
         <link href="/ui/style.css" rel="stylesheet" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="/ui/style.css" rel="stylesheet"  type="text/css"/>
+         <style>
+      #map {
+        height: 1000px;
+        width: 100%;
+       }
+    </style>
     </head>
     <body>
         <div class="center">
@@ -35,11 +41,31 @@
                    http://raghulprasadv.imad.hasura-app.io/"><img src="https://1.bp.blogspot.com/-710D4dnbKKE/WPOEG8eaRNI/AAAAAAAAB2g/olpVqcQiKdMmGHEjVkcEJWxDVEhs5qr5wCLcB/s1600/Whatsapp-48.png" /></a>
         </div>
         </div>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvHNErHwyN9Gjh0oO79OADwCqpHFuvnr4"></script>
+        
         <script>
             alert('Hi di pondatti');
         </script>
         <script id='raghul' type="text/javascript" src="/ui/main.js">
         </script>
+         <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 11.077762, lng: 76.989667};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN1IMMs-a8sGiLVDu7oBcYMSQEAoy9Q30&callback=initMap">
+        
+    </script>
     </body>
+    
 </html>

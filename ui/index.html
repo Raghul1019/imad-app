@@ -10,7 +10,51 @@
         width: 100%;
        }
     </style>
-   
+     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Move a Mark on a Map</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN1IMMs-a8sGiLVDu7oBcYMSQEAoy9Q30&callback=initMap"></script>
+    <script>
+      var x=11.077762;
+      var y=76.989667;
+      var center = new google.maps.LatLng(x,y);
+      function initialize() {
+        var mapOptions = {
+          zoom: 15,
+          center: center,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        map = new google.maps.Map(document.getElementById('map-canvas'),
+                                      mapOptions);
+        var image = 'http://www.apponic.com/data/softimg/mac/audio/audio-editors/tux-guitar-79268-icon.jpeg';
+              marker = new google.maps.Marker({
+            position: center,
+            map: map,
+            icon: image
+        });
+              moveMarker( map, marker );
+      }
+      function moveMarker( map, marker ) {
+          
+          //delayed so you can see it move
+          setInterval( function(){ 
+              x+=0.0001;
+              y-=0.0001;
+              center = new google.maps.LatLng(x,y);
+              marker.setPosition( center );
+              map.panTo( center );
+              
+          }, 500 );
+      };
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
     </head>
     <body>
         <div class="center">
@@ -50,26 +94,7 @@
         
         <script id='raghul' type="text/javascript" src="/ui/main.js">
         </script>
-         <h3>My location</h3>
-    <div id="map"></div>
-    <script>
-      function initMap() {
          
-        var uluru = {lat: 11.077762, lng: 76.989667};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAN1IMMs-a8sGiLVDu7oBcYMSQEAoy9Q30&callback=initMap">
-        
-    </script>
    
   
     

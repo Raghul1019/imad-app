@@ -9,3 +9,7 @@ function moveRight(){
 img.onclick = function(){
   var interval = setInterval(moveRight,50);   
 };
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
